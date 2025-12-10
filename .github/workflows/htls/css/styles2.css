@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f5f5f5;
+}
+
+/* Layout wrapper */
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #ffffff;
+}
+
+/* Header and nav */
+header {
+    border-bottom: 4px solid #0b5ed7;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #0b5ed7;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0b5ed7;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+}
+
+/* Main */
+main h2 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 0.75rem;
+}
+
+img.responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0.5rem 0 1rem 0;
+}
+
+ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+th {
+    background-color: #0b5ed7;
+    color: #ffffff;
+}
+
+form {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+}
+
+form label {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+}
+
+form textarea {
+    min-height: 100px;
+}
+
+form input[type="submit"],
+form button {
+    margin-top: 0.75rem;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #0b5ed7;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover,
+form button:hover {
+    background-color: #0949a8;
+}
+
+footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.95rem;
+    }
+
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    th {
+        display: none;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 40%;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0.5rem;
+        width: 35%;
+        font-weight: bold;
+        color: #333;
+    }
+}
